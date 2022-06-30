@@ -33,7 +33,7 @@ class AsyncScraper:
         await self._session.close()
         if self._verbose:
             self._pbar.close()
-
+    # `urls` is a list of 2-tuples, where the first element is the URL, and the second element is the filename 
     def run(self, urls, verbose=True, redownload=False):
         self._verbose = verbose
         self._redownload = redownload
